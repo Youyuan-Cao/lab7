@@ -19,6 +19,12 @@
 		</div>
 
 		<h4>Projects</h4>
+
+		{{#if viewAlt}}
+		Min!<button class="likeBtn">Like</button>
+
+		{{else}}
+
 		{{#each projects}}
 			<div class="project" id="{{id}}">
 				<div class="thumbnail">
@@ -31,10 +37,25 @@
 				</div>
 			</div>
 		{{/each}}
+		{{/if}}
+
+
 
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114574875-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114574875-1');
+  ga('create','UA-114574875-1','auto');
+	ga("send","event",'like','click');
+</script>
+
 </body>
 </html>
